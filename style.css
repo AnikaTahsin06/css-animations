@@ -1,0 +1,82 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main layout styles */
+header,
+nav,
+main,
+footer {
+    padding: 20px;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    height: 75vh;
+}
+
+/* Grid layout */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: rgb(147, 54, 70);
+    animation-name: example;
+    animation-duration: 30s;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes example {
+    from {
+        background-color: rgb(207, 84, 104);
+    }
+
+    to {
+        background-color: rgb(129, 129, 57);
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
