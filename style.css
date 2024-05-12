@@ -51,7 +51,7 @@ main {
 .grid-item {
     background-color: rgb(147, 54, 70);
     animation-name: example;
-    animation-duration: 30s;
+    animation-duration: 14s;
     padding: 20px;
     text-align: center;
 }
@@ -59,10 +59,12 @@ main {
 @keyframes example {
     from {
         background-color: rgb(207, 84, 104);
+        transform: rotateZ(0deg);
     }
 
     to {
         background-color: rgb(129, 129, 57);
+        transform: rotateZ(360deg);
     }
 }
 
