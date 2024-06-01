@@ -1,55 +1,84 @@
-/* Navbar styles */
-.navbar {
-    background-color: #333;
-  }
-  
-  .menu {
-    list-style-type: none;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #2c3e50;
+}
+
+nav{
     display: flex;
-  }
-  
-  .menu li {
-    position: relative;
-  }
-  
-  .menu li a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .menu li:hover > a {
-    background-color: #555;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #555;
-    z-index: 1;
-  }
-  
-  .dropdown-menu li {
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  /* Sliding animation */
-  .dropdown-menu li {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .dropdown:hover .dropdown-menu li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+    justify-content: space-around;
+    align-items: center;
+	position: relative;
+	/* margin: 270px auto 0;
+	width: 590px; */
+	height: 50px;
+	background: #34495e;
+	/* border-radius: 8px; */
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+
+nav a{
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	/* text-align: center; */
+}
+
+nav .animation{
+	position: absolute;
+	height: 100%;
+	/* height: 5px; */
+	top: 0;
+    left: 10;
+	/* bottom: 0; */
+	z-index: 0;
+	background: #1abc9c;
+	border-radius: 8px;
+	transition: all .5s ease 2s;
+}
+nav a:nth-child(1){
+	width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 110px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+}
+nav a:nth-child(3){
+	width: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+}
+nav a:nth-child(4){
+	width: 160px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 310px;
+}
+nav a:nth-child(5){
+	width: 120px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 120px;
+	left: 470px;
+}
